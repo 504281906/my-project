@@ -1,0 +1,72 @@
+﻿<Window x:Class="五行八卦阵.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="娘娘请翻牌子啦~" Height="595" Width="739.837">
+    <Grid Margin="0,-1,0,1" RenderTransformOrigin="0.504,0.457">
+        <Image Margin="186,113,178,140" Source="Image3.png" Stretch="Fill"/>
+        <Button Name="b1" FontSize="30" Content="坎" HorizontalAlignment="Left" Margin="298,56,0,0" VerticalAlignment="Top" Width="150" Height="50" Click="Button_Click_1"/>
+        <Button Name="b2" FontSize="30" Content="艮" HorizontalAlignment="Left" Margin="462,120,0,0" VerticalAlignment="Top" Width="150" RenderTransformOrigin="0.5,0.5" Height="50" Click="Button_Click2">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="1.108" ScaleX="0.902"/>
+                    <SkewTransform AngleX="-13.366"/>
+                    <RotateTransform Angle="38.317"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button Name="b3" FontSize="30" Content="乾" HorizontalAlignment="Left" Margin="133,113,0,0" VerticalAlignment="Top" Width="150" RenderTransformOrigin="0.5,0.5" Height="50" Click="Button_Click_3">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="1.108" ScaleX="0.902"/>
+                    <SkewTransform AngleX="13.366"/>
+                    <RotateTransform Angle="-38.317"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button Name="b4" FontSize="30" Content="震" HorizontalAlignment="Left" Margin="514,251,0,0" VerticalAlignment="Top" Width="150" RenderTransformOrigin="0.5,0.5" Height="50" Click="Button_Click_4">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="1.266" ScaleX="0.79"/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="90.000"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button Name="b5" FontSize="30" Content="兑" HorizontalAlignment="Left" Margin="72,250,0,0" VerticalAlignment="Top" Width="150" RenderTransformOrigin="0.5,0.5" Height="50" Click="Button_Click_5">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="1.266" ScaleX="0.79"/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-90.000"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button Name="b6" FontSize="30" Content="坤" HorizontalAlignment="Left" Margin="144,376,0,0" VerticalAlignment="Top" Width="150" RenderTransformOrigin="0.5,0.5" Height="50" Click="Button_Click_6">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="1.108" ScaleX="0.902"/>
+                    <SkewTransform AngleX="-13.366"/>
+                    <RotateTransform Angle="38.317"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button Name="b7" FontSize="30" Content="巽" HorizontalAlignment="Left" Margin="453,372,0,0" VerticalAlignment="Top" Width="150" RenderTransformOrigin="0.5,0.5" Height="50" Click="Button_Click_7">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="1.108" ScaleX="0.902"/>
+                    <SkewTransform AngleX="13.366"/>
+                    <RotateTransform Angle="-38.317"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button Name="b8" FontSize="30" Content="离" HorizontalAlignment="Left" Margin="299,430,0,0" VerticalAlignment="Top" Width="150" Height="50" Click="Button_Click"/>
+        <Button FontSize="20" Content="少侠请重新来过？" HorizontalAlignment="Left" Height="76" Margin="554,10,0,0" VerticalAlignment="Top" Width="168" Click="Button_Click_2"/>
+
+    </Grid>
+</Window>
