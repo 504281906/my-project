@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ex10", "Ex10\Ex10.csproj", "{895ACF5C-3143-472A-8470-50E12C0156E4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ex10CardClient", "Ex10CardClient\Ex10CardClient.csproj", "{DF0E9A49-F7C0-4BD2-AD29-F8C10BFC21E0}"
+	ProjectSection(ProjectDependencies) = postProject
+		{895ACF5C-3143-472A-8470-50E12C0156E4} = {895ACF5C-3143-472A-8470-50E12C0156E4}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{895ACF5C-3143-472A-8470-50E12C0156E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{895ACF5C-3143-472A-8470-50E12C0156E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{895ACF5C-3143-472A-8470-50E12C0156E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{895ACF5C-3143-472A-8470-50E12C0156E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF0E9A49-F7C0-4BD2-AD29-F8C10BFC21E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF0E9A49-F7C0-4BD2-AD29-F8C10BFC21E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF0E9A49-F7C0-4BD2-AD29-F8C10BFC21E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF0E9A49-F7C0-4BD2-AD29-F8C10BFC21E0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

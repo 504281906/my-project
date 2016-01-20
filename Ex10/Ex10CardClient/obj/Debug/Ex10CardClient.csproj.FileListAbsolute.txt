@@ -1,0 +1,7 @@
+c:\Users\modiz\documents\visual studio 2012\Projects\Ex10\Ex10CardClient\obj\Debug\Ex10CardClient.csprojResolveAssemblyReference.cache
+c:\Users\modiz\documents\visual studio 2012\Projects\Ex10\Ex10CardClient\bin\Debug\Ex10CardClient.exe
+c:\Users\modiz\documents\visual studio 2012\Projects\Ex10\Ex10CardClient\bin\Debug\Ex10CardClient.pdb
+c:\Users\modiz\documents\visual studio 2012\Projects\Ex10\Ex10CardClient\bin\Debug\Ex10.dll
+c:\Users\modiz\documents\visual studio 2012\Projects\Ex10\Ex10CardClient\bin\Debug\Ex10.pdb
+c:\Users\modiz\documents\visual studio 2012\Projects\Ex10\Ex10CardClient\obj\Debug\Ex10CardClient.exe
+c:\Users\modiz\documents\visual studio 2012\Projects\Ex10\Ex10CardClient\obj\Debug\Ex10CardClient.pdb

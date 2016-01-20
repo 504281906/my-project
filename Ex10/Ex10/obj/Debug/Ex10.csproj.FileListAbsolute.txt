@@ -1,0 +1,4 @@
+c:\users\modiz\documents\visual studio 2012\Projects\Ex10\Ex10\bin\Debug\Ex10.dll
+c:\users\modiz\documents\visual studio 2012\Projects\Ex10\Ex10\bin\Debug\Ex10.pdb
+c:\users\modiz\documents\visual studio 2012\Projects\Ex10\Ex10\obj\Debug\Ex10.dll
+c:\users\modiz\documents\visual studio 2012\Projects\Ex10\Ex10\obj\Debug\Ex10.pdb
