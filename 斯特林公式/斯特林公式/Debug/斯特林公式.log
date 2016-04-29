@@ -1,0 +1,16 @@
+﻿生成启动时间为 2016/4/7 16:59:04。
+     1>项目“c:\Users\modiz\documents\visual studio 2012\Projects\斯特林公式\斯特林公式\斯特林公式.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         D:\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt "阶乘及位数.cpp"
+         阶乘及位数.cpp
+     1>c:\users\modiz\documents\visual studio 2012\projects\斯特林公式\斯特林公式\阶乘及位数.cpp(23): warning C4244: “参数”: 从“__int64”转换到“int”，可能丢失数据
+     1>c:\users\modiz\documents\visual studio 2012\projects\斯特林公式\斯特林公式\阶乘及位数.cpp(23): warning C4244: “初始化”: 从“double”转换到“__int64”，可能丢失数据
+     1>c:\users\modiz\documents\visual studio 2012\projects\斯特林公式\斯特林公式\阶乘及位数.cpp(24): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+       Link:
+         D:\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"c:\users\modiz\documents\visual studio 2012\Projects\斯特林公式\Debug\斯特林公式.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"c:\users\modiz\documents\visual studio 2012\Projects\斯特林公式\Debug\斯特林公式.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"c:\users\modiz\documents\visual studio 2012\Projects\斯特林公式\Debug\斯特林公式.lib" /MACHINE:X86 "Debug\阶乘及位数.obj"
+         斯特林公式.vcxproj -> c:\users\modiz\documents\visual studio 2012\Projects\斯特林公式\Debug\斯特林公式.exe
+     1>已完成生成项目“c:\Users\modiz\documents\visual studio 2012\Projects\斯特林公式\斯特林公式\斯特林公式.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:00.72
