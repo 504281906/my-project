@@ -1,0 +1,163 @@
+// OpenCvTest.cpp : 定义控制台应用程序的入口点。
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include <opencv2\core\core.hpp>
+#include <opencv2\core\mat.hpp>
+#include <opencv2\highgui\highgui.hpp>
+#include <opencv2\imgproc\imgproc.hpp>
+#include <stack>
+#include <time.h>
+#include <cmath>
+using namespace cv;
+using namespace std;
+#define eps 1e-8
+#define cs 50          //设置阈值
+struct point 
+{
+	int x,y;
+	int lx,rx;
+	int flag;
+	point (int a=0,int b=0,int c=0,int d=0,int e=0)
+	{
+		x=a;
+		y=b;
+		lx=c;
+		rx=d;
+		flag=e;
+	}
+};
+IplImage *img = cvLoadImage("1.png",1);
+CvScalar s1;   //填充新颜色
+int k=0;
+
+bool cmpare(CvScalar a,CvScalar b)
+{
+	double cv=sqrt( pow((a.val[0]-b.val[0]),2) + pow((a.val[1]-b.val[1]),2) + pow((a.val[2]-b.val[2]),2) );
+	if (cv-cs<eps)
+		return true;
+	return false;
+
+	/*if (a.val[0]==b.val[0] &&
+		a.val[1]==b.val[1] &&
+		a.val[2]==b.val[2])
+		return true;
+	return false;*/
+}
+
+int FillRight(int x,int y,CvScalar s,CvScalar s1)
+{
+	int ans=0;
+	while (x<img->width && cmpare(s,cvGet2D(img,y,x)))
+	{
+		cvSet2D(img,y,x,s1);
+		ans++;
+		x++;
+	}
+	return ans;
+}
+
+int FillLeft(int x,int y,CvScalar s,CvScalar s1)
+{
+	int ans=0;
+	while (x>0 && cmpare(s,cvGet2D(img,y,x)))
+	{
+		cvSet2D(img,y,x,s1);
+		ans++;
+		x--;
+	}
+	return ans;
+}
+
+void FindSeed(std::stack<point>&stk,int x1,int x2,int y,CvScalar s)
+{
+	bool find=0;
+	while (x1<=x2)
+	{
+		find = 0;
+		int lx=x1;
+		while (x1<=x2 && cmpare(s,cvGet2D(img,y,x1)))
+		{
+			find = 1;
+			x1++;
+			cvSet2D(img,y,x1-1,s1);
+		}
+		if (find) stk.push(point(x1-1,y,lx,x1-1,1));
+		x1++;
+	}
+}
+
+void FillIt(int x,int y,CvScalar s)
+{
+	std::stack<point> stk;
+	stk.push(point(x,y,x,x,0));
+	while(!stk.empty())
+	{
+		point a=stk.top();
+		stk.pop();
+		int xLeft,xRight;
+		int t = FillRight(a.x+a.flag,a.y,s,s1);
+		xRight=max(a.rx,a.x+t-!a.flag);
+		t = FillLeft(a.x-1+a.lx-a.rx,a.y,s,s1);
+		xLeft = min(a.lx,a.x+a.lx-a.rx-t);
+		
+		if (a.y-1>0){
+			FindSeed(stk,xLeft,xRight,a.y-1,s);
+			//FillLeft(a.x-1,a.y-1,s,s1);
+		}
+		if (a.y+1<img->height)
+		{
+			FindSeed(stk,xLeft,xRight,a.y+1,s);
+			//FillRight(a.x,a.y+1,s,s1);
+		}
+	}
+}
+
+void on_mouse(int event, int x,int y ,int flags,void *p)
+{
+	if (event == CV_EVENT_LBUTTONDOWN)
+	{
+		CvPoint pt = cvPoint(x, y);
+		printf("%d %d %d\n",++k,x,y);
+		if(x>img->width || x<0) return;
+		if(y>img->height || y<0) return;
+		s1.val[0]=rand()%255;
+		s1.val[1]=rand()%255;
+		s1.val[2]=rand()%255;
+		CvScalar s;
+		s = cvGet2D(img,pt.y,pt.x);
+		if (cmpare(s,s1)) return ;
+		FillIt(pt.x,pt.y,s);
+		cvDestroyWindow("img");
+		cvShowImage("Test",img);
+	}
+	if (event == CV_EVENT_RBUTTONDBLCLK)
+	{
+		exit(1);
+	}
+}
+int _tmain(int argc, _TCHAR* argv[])
+{
+	//IplImage*iplImg = cvLoadImage("C://1.jpg", 1);
+	//Mat mtx(iplImg); // IplImage* ->Mat 共享数据
+	//medianBlur(mtx, mtx, 3);
+	//imwrite("c:\\11.jpg", mtx);
+
+
+	cout << "请输入需要填图的文件名:" << endl;
+	char c[255];
+	cin >> c;
+	img = cvLoadImage(c, 1);
+	cvNamedWindow("Test");
+	cvShowImage("Test",img);
+	printf("%d %d\n",img->width,img->height);
+	cvSetMouseCallback("Test",on_mouse,NULL);
+	srand((unsigned int)time(0));
+	while(1)
+	{
+		cvWaitKey(0);
+	}
+	cvDestroyWindow("img");
+    return 0;
+}
