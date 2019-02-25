@@ -74,7 +74,7 @@ void FindSeed(std::stack<point>&stk,int x1,int x2,int y,CvScalar s)
 {
 	bool find=0;
 	while (x1<=x2)
-	{
+	{ 
 		find = 0;
 		int lx=x1;
 		while (x1<=x2 && cmpare(s,cvGet2D(img,y,x1)))
